@@ -13,7 +13,7 @@ n_samples = n_inliers + n_outliers;
 R_samples = cell(1, n_samples);
                 
 for i = 1:n_samples
-    if (i <= n_outliers)
+    if (i <= n_inliers)
         % Inliers: perturb by 5 deg.
         axis_perturb = rand(3,1)-0.5;
         axis_perturb = axis_perturb/norm(axis_perturb);
